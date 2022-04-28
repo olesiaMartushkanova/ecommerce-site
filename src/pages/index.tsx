@@ -14,7 +14,8 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          {'Welcome to '}<a href={'https://nextjs.org'}>{'Next.js!'}</a>
+          {'Welcome to '}
+          <a href={'https://nextjs.org'}>{'Next.js!'}</a>
         </h1>
 
         <p className={styles.description}>
@@ -30,7 +31,9 @@ const Home: NextPage = () => {
 
           <a href={'https://nextjs.org/learn'} className={styles.card}>
             <h2>{'Learn &rarr;'}</h2>
-            <p>{'Learn about Next.js in an interactive course with quizzes!'}</p>
+            <p>
+              {'Learn about Next.js in an interactive course with quizzes!'}
+            </p>
           </a>
 
           <a
@@ -42,12 +45,16 @@ const Home: NextPage = () => {
           </a>
 
           <a
-            href={'https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'}
+            href={
+              'https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+            }
             className={styles.card}
           >
             <h2>{'Deploy &rarr;'}</h2>
             <p>
-              {'Instantly deploy your Next.js site to a public URL with Vercel.'}
+              {
+                'Instantly deploy your Next.js site to a public URL with Vercel.'
+              }
             </p>
           </a>
         </div>
@@ -55,13 +62,20 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <a
-          href={'https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'}
+          href={
+            'https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+          }
           target={'_blank'}
           rel={'noopener noreferrer'}
         >
           {'Powered by'}{' '}
           <span className={styles.logo}>
-            <Image src={'/vercel.svg'} alt={'Vercel Logo'} width={72} height={16} />
+            <Image
+              src={'/vercel.svg'}
+              alt={'Vercel Logo'}
+              width={72}
+              height={16}
+            />
           </span>
         </a>
       </footer>
