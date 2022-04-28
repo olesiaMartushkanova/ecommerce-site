@@ -50,7 +50,7 @@ const Home: NextPage = () => {
             }
             className={styles.card}
           >
-            <h2>{'Deploy &rarr;'}</h2>
+            <h2 className='text-3xl font-bold underline'>{'Deploy &rarr;'}</h2>
             <p>
               {
                 'Instantly deploy your Next.js site to a public URL with Vercel.'
