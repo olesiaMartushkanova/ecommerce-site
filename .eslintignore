@@ -1,0 +1,6 @@
+!.eslintrc.js
+.next
+.vscode
+/build/**
+package.json
+styles
