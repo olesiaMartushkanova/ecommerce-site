@@ -1,7 +1,10 @@
 import Menu, { IListItem } from './components/Menu';
 
 const Footer = () => {
-  const listItems: IListItem[] = [{ name: 'Suitcases' }];
+  const listItems: IListItem[] = [
+    { id: 'suitcases', name: 'Suitcases' },
+    { id: 'bags', name: 'Bags' },
+  ];
 
   return (
     <div className='bg-red-400'>

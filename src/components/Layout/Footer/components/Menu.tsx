@@ -1,4 +1,5 @@
 export interface IListItem {
+  id: string;
   name: string;
   routeLink?: string;
 }
@@ -10,9 +11,11 @@ interface IMenu {
 const Menu = ({ listItems }: IMenu) => {
   return (
     <>
-      {listItems.map((item) => {
-        <li>{item.name}</li>;
-      })}
+      {listItems.map((item) => (
+        <li className='text-lg list-none' key={item.id}>
+          {item.name}
+        </li>
+      ))}
     </>
   );
 };
