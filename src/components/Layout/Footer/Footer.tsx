@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className='bg-red-400'>
       <div>Sign up for our emails</div>
-      <Menu listItems={listItems} />
+      <Menu title='Shop' listItems={listItems} />
     </div>
   );
 };

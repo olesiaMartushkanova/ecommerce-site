@@ -7,19 +7,23 @@ export interface IListItem {
 }
 
 interface IMenu {
+  title: string;
   listItems: IListItem[];
 }
 
-const Menu = ({ listItems }: IMenu) => {
+const Menu = ({ listItems, title }: IMenu) => {
+  const elListItem = listItems.map((item) => (
+    <li className='text-lg list-none' key={item.id}>
+      <Link href={`/${item.routeLink}`}>
+        <a>{item.name}</a>
+      </Link>
+    </li>
+  ));
+
   return (
     <>
-      {listItems.map((item) => (
-        <li className='text-lg list-none' key={item.id}>
-          <Link href={`/${item.routeLink}`}>
-            <a>{item.name}</a>
-          </Link>
-        </li>
-      ))}
+      <div>{title}</div>
+      {elListItem}
     </>
   );
 };

@@ -11,6 +11,7 @@ const Template: ComponentStory<typeof Menu> = (args) => <Menu {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  title: 'Shop',
   listItems: TEST_ITEMS,
 };
 
