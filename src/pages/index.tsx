@@ -3,11 +3,9 @@ import Head from 'next/head';
 import Footer from '../components/Layout/Footer/Footer';
 import Header from '../components/Layout/Header/Header';
 
-import styles from '../styles/Home.module.css';
-
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>{'Ecommerce site by Olesia'}</title>
         <meta name={'Ecommerce site'} content={'Built by Olesia'} />

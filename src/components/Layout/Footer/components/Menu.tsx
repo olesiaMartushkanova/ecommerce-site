@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export interface IListItem {
   id: string;
   name: string;
@@ -13,7 +15,9 @@ const Menu = ({ listItems }: IMenu) => {
     <>
       {listItems.map((item) => (
         <li className='text-lg list-none' key={item.id}>
-          {item.name}
+          <Link href={`/${item.routeLink}`}>
+            <a>{item.name}</a>
+          </Link>
         </li>
       ))}
     </>

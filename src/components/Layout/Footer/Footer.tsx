@@ -2,8 +2,8 @@ import Menu, { IListItem } from './components/Menu';
 
 const Footer = () => {
   const listItems: IListItem[] = [
-    { id: 'suitcases', name: 'Suitcases' },
-    { id: 'bags', name: 'Bags' },
+    { id: 'suitcases', name: 'Suitcases', routeLink: '/suitcases' },
+    { id: 'bags', name: 'Bags', routeLink: '/bags' },
   ];
 
   return (
