@@ -1,6 +1,10 @@
 import Menu, { IListItem } from './components/Menu';
 
-const Footer = () => {
+interface IFooter {
+  className?: string;
+}
+
+const Footer = ({ className }: IFooter) => {
   const listItemsShop: IListItem[] = [
     { id: 'suitcases', name: 'Suitcases', routeLink: 'suitcases' },
     { id: 'bags', name: 'Bags', routeLink: 'bags' },
@@ -16,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className='flex justify-evenly bg-lime-50'>
+    <div className={`${className} flex justify-evenly bg-lime-50`}>
       <Menu className='mr-5' title='Shop' listItems={listItemsShop} />
       <Menu title='About' listItems={listItemsAbout} />
     </div>
