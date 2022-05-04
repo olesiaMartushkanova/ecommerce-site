@@ -1,7 +1,5 @@
-const Component = () => {
+const CartButton = () => {
   return <div>Future component</div>;
 };
 
-export default Component;
-
-// TODO: create snippet for it
+export default CartButton;
