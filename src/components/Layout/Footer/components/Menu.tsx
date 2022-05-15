@@ -1,16 +1,16 @@
 import Link from 'next/link';
 
-export interface IListItem {
+export type IListItem = {
   id: string;
   name: string;
   routeLink?: string;
-}
+};
 
-interface IMenu {
+type IMenu = {
   title: string;
   listItems: IListItem[];
   className?: string;
-}
+};
 
 const Menu = ({ listItems, title, className }: IMenu) => {
   return (

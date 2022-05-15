@@ -1,18 +1,18 @@
 import Image from 'next/image';
 
-interface IImage {
+type IImage = {
   src: string;
-  description?: string;
+  alt: string;
   className?: string;
   width?: string;
   height?: string;
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   isClickable?: boolean;
-}
+};
 
 const Icon = ({
   src,
-  description,
+  alt,
   className,
   width = '25',
   height = '35',
@@ -25,7 +25,7 @@ const Icon = ({
     <Image
       className={`${className} ${cursorPointer}`}
       src={src}
-      alt={description}
+      alt={alt}
       width={width}
       height={height}
       onClick={onClick}

@@ -1,8 +1,8 @@
 import Menu, { IListItem } from './components/Menu';
 
-interface IFooter {
+type IFooter = {
   className?: string;
-}
+};
 
 const Footer = ({ className }: IFooter) => {
   const listItemsShop: IListItem[] = [
