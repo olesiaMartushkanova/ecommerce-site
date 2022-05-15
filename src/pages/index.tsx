@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../components/Layout/Footer/Footer';
 import Header from '../components/Layout/Header/Header';
-import Icon from '../components/Primitives/Icon';
 
 const Home: NextPage = () => {
   return (
@@ -14,10 +13,7 @@ const Home: NextPage = () => {
       </Head>
       <main className='h-screen flex flex-col'>
         <Header />
-        <div className='flex flex-1 overflow-auto'>
-          BODY
-          <Icon name='/images/cart.svg' />
-        </div>
+        <div className='flex flex-1 overflow-auto'>BODY</div>
         <Footer />
       </main>
     </div>

@@ -1,4 +1,5 @@
 {
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -20,17 +21,28 @@
     "no-var": "error",
     "react/prop-types": 0,
     "jsx-quotes": ["error", "prefer-single"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "max-len": [2, { "code": 120, "ignoreUrls": true }],
+    "no-multiple-empty-lines": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ]
   },
   "overrides": [
     {
-      // TypeScript specific
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/ban-types": ["off"],
         "@typescript-eslint/explicit-module-boundary-types": ["off"],
         "@typescript-eslint/no-empty-interface": ["off"],
-        "@typescript-eslint/no-explicit-any": ["off"],
+        "@typescript-eslint/no-explicit-any": ["warn"],
         "@typescript-eslint/no-var-requires": ["off"],
         "@typescript-eslint/quotes": [
           "error",

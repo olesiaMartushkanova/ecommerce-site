@@ -1,21 +1,21 @@
 import Image from 'next/image';
 
 interface IImage {
-  name: string;
+  src: string;
   description?: string;
   className?: string;
   width?: string;
   height?: string;
-  onClick?: any;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   isClickable?: boolean;
 }
 
 const Icon = ({
-  name,
+  src,
   description,
   className,
-  width,
-  height,
+  width = '25',
+  height = '35',
   onClick,
   isClickable = false,
 }: IImage) => {
@@ -24,10 +24,10 @@ const Icon = ({
   return (
     <Image
       className={`${className} ${cursorPointer}`}
-      src={name}
+      src={src}
       alt={description}
-      width={'240'}
-      height={'240'}
+      width={width}
+      height={height}
       onClick={onClick}
     ></Image>
   );
