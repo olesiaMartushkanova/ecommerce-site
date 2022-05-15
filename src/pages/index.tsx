@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../components/Layout/Footer/Footer';
 import Header from '../components/Layout/Header/Header';
+import { ICONS } from '../utils/constants';
 
 const Home: NextPage = () => {
   return (
@@ -9,7 +10,7 @@ const Home: NextPage = () => {
       <Head>
         <title>{'Ecommerce site by Olesia'}</title>
         <meta name={'Ecommerce site'} content={'Built by Olesia'} />
-        <link rel={'icon'} href={'/images/shop.svg'} />
+        <link rel={'icon'} href={ICONS.shop} />
       </Head>
       <main className='h-screen flex flex-col'>
         <Header />

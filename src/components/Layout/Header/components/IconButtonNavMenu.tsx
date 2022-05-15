@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
+import { ICONS } from '../../../../utils/constants';
 import Icon from '../../../Primitives/Icon';
 
 const IconButtonNavMenu = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const [iconSrc, setIconSrc] = useState('/images/menu-closed.svg');
+  const [iconSrc, setIconSrc] = useState(ICONS.menuClosed);
 
   const handleClick = () =>
     isMenuOpened ? setIsMenuOpened(false) : setIsMenuOpened(true);
 
   useEffect(() => {
-    const src = isMenuOpened
-      ? '/images/menu-opened.svg'
-      : '/images/menu-closed.svg';
+    const src = isMenuOpened ? ICONS.menuOpened : ICONS.menuClosed;
     setIconSrc(src);
   }, [isMenuOpened]);
 
