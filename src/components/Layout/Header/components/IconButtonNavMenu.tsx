@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ICONS } from '../../../../utils/constants';
-import Icon from '../../../Primitives/Icon';
+import Icon from '../../../Primitives/Icon/Icon';
 
 const IconButtonNavMenu = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);

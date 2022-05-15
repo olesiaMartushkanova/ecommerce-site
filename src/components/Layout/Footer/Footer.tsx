@@ -1,15 +1,15 @@
-import Menu, { IListItem } from './components/Menu';
+import Menu, { ListItemType } from './components/Menu';
 
-type IFooter = {
+type FooterProps = {
   className?: string;
 };
 
-const Footer = ({ className }: IFooter) => {
-  const listItemsShop: IListItem[] = [
+const Footer = ({ className }: FooterProps) => {
+  const listItemsShop: ListItemType[] = [
     { id: 'suitcases', name: 'Suitcases', routeLink: 'suitcases' },
     { id: 'bags', name: 'Bags', routeLink: 'bags' },
   ];
-  const listItemsAbout: IListItem[] = [
+  const listItemsAbout: ListItemType[] = [
     { id: 'ourStory', name: 'Our Story', routeLink: 'story' },
     {
       id: 'deliveryAndReturns',

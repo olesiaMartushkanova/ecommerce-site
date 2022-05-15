@@ -1,18 +1,18 @@
 import Link from 'next/link';
 
-export type IListItem = {
+export type ListItemType = {
   id: string;
   name: string;
   routeLink?: string;
 };
 
-type IMenu = {
+type MenuProps = {
   title: string;
-  listItems: IListItem[];
+  listItems: ListItemType[];
   className?: string;
 };
 
-const Menu = ({ listItems, title, className }: IMenu) => {
+const Menu = ({ listItems, title, className }: MenuProps) => {
   return (
     <div className='mb-4 mt-2'>
       <div className='text-lg font-bold mb-1 mt-2'>{title}</div>

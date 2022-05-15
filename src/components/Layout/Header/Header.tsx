@@ -1,5 +1,5 @@
 import { ICONS } from '../../../utils/constants';
-import Icon from '../../Primitives/Icon';
+import Icon from '../../Primitives/Icon/Icon';
 import IconButtonNavMenu from './components/IconButtonNavMenu';
 
 const Header = () => {

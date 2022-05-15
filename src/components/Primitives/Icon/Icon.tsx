@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-type IImage = {
+type IconProps = {
   src: string;
   alt: string;
   className?: string;
@@ -18,7 +18,7 @@ const Icon = ({
   height = '35',
   onClick,
   isClickable = false,
-}: IImage) => {
+}: IconProps) => {
   const cursorPointer = isClickable ? 'focus:cursor-auto' : undefined;
 
   return (

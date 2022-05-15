@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Menu, { IListItem } from './Menu';
+import Menu, { ListItemType } from './Menu';
 
-const TEST_ITEMS: IListItem[] = [
+const TEST_ITEMS: ListItemType[] = [
   { id: 'suitcases', name: 'Suitcases' },
   { id: 'bags', name: 'Bags' },
   { id: 'accessories', name: 'Accessories' },
