@@ -7,7 +7,7 @@ const Header = () => {
       <div className='absolute left-0 ml-6'>
         <IconButtonNavMenu />
       </div>
-      <div className='font-bold'>ShopHappy</div>
+      <div className='font-bold'>Your Happy Place</div>
       <div className='absolute right-0 mr-6'>
         <IconButtonCart />
       </div>
