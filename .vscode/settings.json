@@ -3,5 +3,6 @@
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "prettier.configPath": ".prettierrc",
   "prettier.ignorePath": ".prettierignore",
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "cSpell.words": ["Ecommerce"]
 }
