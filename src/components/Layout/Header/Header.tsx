@@ -1,15 +1,16 @@
-import { ICONS } from '../../../utils/constants';
-import Icon from '../../Primitives/Icon/Icon';
+import IconButtonCart from './components/IconButtonCart';
 import IconButtonNavMenu from './components/IconButtonNavMenu';
 
 const Header = () => {
-  const elCartIcon = <Icon src={ICONS.cart} alt='cart icon button'></Icon>;
-
   return (
-    <div className='bg-green-400 h-12 flex justify-evenly items-center'>
-      <IconButtonNavMenu />
+    <div className='h-12 items-center flex relative justify-evenly'>
+      <div className='absolute left-0 ml-6'>
+        <IconButtonNavMenu />
+      </div>
       <div className='font-bold'>ShopHappy</div>
-      {elCartIcon}
+      <div className='absolute right-0 mr-6'>
+        <IconButtonCart />
+      </div>
     </div>
   );
 };

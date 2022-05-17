@@ -20,7 +20,7 @@ const Footer = ({ className }: FooterProps) => {
   ];
 
   return (
-    <div className={`${className} flex justify-evenly bg-lime-50`}>
+    <div className={`${className} flex justify-evenly bg-black text-white`}>
       <Menu className='mr-5' title='Shop' listItems={listItemsShop} />
       <Menu title='About' listItems={listItemsAbout} />
     </div>
