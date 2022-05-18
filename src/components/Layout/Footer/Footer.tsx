@@ -1,3 +1,4 @@
+import { SHOP_LIST_ITEMS } from '../../../utils/constants';
 import Menu, { ListItemType } from './components/Menu';
 
 type FooterProps = {
@@ -5,10 +6,6 @@ type FooterProps = {
 };
 
 const Footer = ({ className }: FooterProps) => {
-  const listItemsShop: ListItemType[] = [
-    { id: 'suitcases', name: 'Suitcases', routeLink: 'suitcases' },
-    { id: 'bags', name: 'Bags', routeLink: 'bags' },
-  ];
   const listItemsAbout: ListItemType[] = [
     { id: 'ourStory', name: 'Our Story', routeLink: 'story' },
     {
@@ -21,7 +18,7 @@ const Footer = ({ className }: FooterProps) => {
 
   return (
     <div className={`${className} flex justify-evenly bg-black text-white`}>
-      <Menu className='mr-5' title='Shop' listItems={listItemsShop} />
+      <Menu className='mr-5' title='Shop' listItems={SHOP_LIST_ITEMS} />
       <Menu title='About' listItems={listItemsAbout} />
     </div>
   );
