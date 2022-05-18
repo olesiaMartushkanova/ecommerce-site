@@ -3,7 +3,7 @@ import IconButtonNavMenu from './components/IconButtonNavMenu';
 
 const Header = () => {
   return (
-    <div className='h-12 items-center flex relative justify-evenly'>
+    <div className='items-center flex relative justify-evenly h-16'>
       <div className='absolute left-0 ml-6'>
         <IconButtonNavMenu />
       </div>
