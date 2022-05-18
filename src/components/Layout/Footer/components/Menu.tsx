@@ -1,10 +1,4 @@
-import Link from 'next/link';
-
-export type ListItemType = {
-  id: string;
-  name: string;
-  routeLink?: string;
-};
+import List, { ListItemType } from '../../../Primitives/List/List';
 
 type MenuProps = {
   title: string;
@@ -14,15 +8,9 @@ type MenuProps = {
 
 const Menu = ({ listItems, title, className }: MenuProps) => {
   return (
-    <div className='mb-4 mt-2'>
-      <div className='text-lg font-bold mb-1 mt-2'>{title}</div>
-      {listItems.map((item) => (
-        <li className={`${className} list-none`} key={item.id}>
-          <Link href={`/${item.routeLink}`}>
-            <a>{item.name}</a>
-          </Link>
-        </li>
-      ))}
+    <div className='mb-8 mt-6'>
+      <div className='font-bold text-2xl mb-1 mt-2'>{title}</div>
+      <List className={`${className} text-lg`} listItems={listItems} />
     </div>
   );
 };

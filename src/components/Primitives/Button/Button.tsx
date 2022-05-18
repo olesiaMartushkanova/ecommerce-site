@@ -7,7 +7,7 @@ type ButtonProps = {
 const Button = ({ label, className, onClick }: ButtonProps) => {
   return (
     <button
-      className={`${className} border-solid border-black border-2 h-12 w-48 text-2xl rounded-2xl`}
+      className={`${className} border-solid border-black border-2 h-12 w-48 text-2xl rounded-full`}
       onClick={onClick}
     >
       {label}

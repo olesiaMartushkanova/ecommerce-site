@@ -1,27 +1,25 @@
-import Menu, { ListItemType } from './components/Menu';
+import { SHOP_LIST_ITEMS } from '../../../utils/constants';
+import { ListItemType } from '../../Primitives/List/List';
+import Menu from './components/Menu';
 
 type FooterProps = {
   className?: string;
 };
 
 const Footer = ({ className }: FooterProps) => {
-  const listItemsShop: ListItemType[] = [
-    { id: 'suitcases', name: 'Suitcases', routeLink: 'suitcases' },
-    { id: 'bags', name: 'Bags', routeLink: 'bags' },
-  ];
   const listItemsAbout: ListItemType[] = [
-    { id: 'ourStory', name: 'Our Story', routeLink: 'story' },
+    { id: 'ourStory', title: 'Our Story', routeLink: 'story' },
     {
       id: 'deliveryAndReturns',
-      name: 'Delivery & Returns',
+      title: 'Delivery & Returns',
       routeLink: 'deliveryAndReturns',
     },
-    { id: 'contactUs', name: 'Contact Us', routeLink: 'contact' },
+    { id: 'contactUs', title: 'Contact Us', routeLink: 'contact' },
   ];
 
   return (
     <div className={`${className} flex justify-evenly bg-black text-white`}>
-      <Menu className='mr-5' title='Shop' listItems={listItemsShop} />
+      <Menu className='mr-5' title='Shop' listItems={SHOP_LIST_ITEMS} />
       <Menu title='About' listItems={listItemsAbout} />
     </div>
   );
