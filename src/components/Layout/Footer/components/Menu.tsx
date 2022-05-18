@@ -8,9 +8,9 @@ type MenuProps = {
 
 const Menu = ({ listItems, title, className }: MenuProps) => {
   return (
-    <div className='mb-4 mt-2'>
-      <div className='text-lg font-bold mb-1 mt-2'>{title}</div>
-      <List className={className} listItems={listItems} />
+    <div className='mb-8 mt-6'>
+      <div className='font-bold text-2xl mb-1 mt-2'>{title}</div>
+      <List className={`${className} text-lg`} listItems={listItems} />
     </div>
   );
 };

@@ -2,12 +2,16 @@ import { useState, useEffect } from 'react';
 import { ICONS } from '../../../../utils/constants';
 import Icon from '../../../Primitives/Icon/Icon';
 
-const IconButtonNavMenu = () => {
-  const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const [iconSrc, setIconSrc] = useState(ICONS.menuClosed);
+type IconButtonNavMenuProps = {
+  isMenuOpened?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+};
 
-  const handleClick = () =>
-    isMenuOpened ? setIsMenuOpened(false) : setIsMenuOpened(true);
+const IconButtonNavMenu = ({
+  isMenuOpened,
+  onClick,
+}: IconButtonNavMenuProps) => {
+  const [iconSrc, setIconSrc] = useState(ICONS.menuClosed);
 
   useEffect(() => {
     const src = isMenuOpened ? ICONS.menuOpened : ICONS.menuClosed;
@@ -15,12 +19,14 @@ const IconButtonNavMenu = () => {
   }, [isMenuOpened]);
 
   return (
-    <Icon
-      alt={'header navigation icon menu'}
-      src={iconSrc}
-      isClickable={true}
-      onClick={handleClick}
-    />
+    <div>
+      <Icon
+        alt={'header navigation icon menu'}
+        src={iconSrc}
+        isClickable={true}
+        onClick={onClick}
+      />
+    </div>
   );
 };
 export default IconButtonNavMenu;
