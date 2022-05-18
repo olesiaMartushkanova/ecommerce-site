@@ -1,4 +1,4 @@
-import { ListItemType } from '../components/Layout/Footer/components/Menu';
+import { ListItemType } from '../components/Primitives/List/List';
 
 const publicImagesSrc = '/images';
 
@@ -10,6 +10,6 @@ export const ICONS = {
 };
 
 export const SHOP_LIST_ITEMS: ListItemType[] = [
-  { id: 'suitcases', name: 'Suitcases', routeLink: 'suitcases' },
-  { id: 'bags', name: 'Bags', routeLink: 'bags' },
+  { id: 'suitcases', title: 'Suitcases', routeLink: 'suitcases' },
+  { id: 'bags', title: 'Bags', routeLink: 'bags' },
 ];

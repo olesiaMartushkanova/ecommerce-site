@@ -1,5 +1,6 @@
 import { SHOP_LIST_ITEMS } from '../../../utils/constants';
-import Menu, { ListItemType } from './components/Menu';
+import { ListItemType } from '../../Primitives/List/List';
+import Menu from './components/Menu';
 
 type FooterProps = {
   className?: string;
@@ -7,13 +8,13 @@ type FooterProps = {
 
 const Footer = ({ className }: FooterProps) => {
   const listItemsAbout: ListItemType[] = [
-    { id: 'ourStory', name: 'Our Story', routeLink: 'story' },
+    { id: 'ourStory', title: 'Our Story', routeLink: 'story' },
     {
       id: 'deliveryAndReturns',
-      name: 'Delivery & Returns',
+      title: 'Delivery & Returns',
       routeLink: 'deliveryAndReturns',
     },
-    { id: 'contactUs', name: 'Contact Us', routeLink: 'contact' },
+    { id: 'contactUs', title: 'Contact Us', routeLink: 'contact' },
   ];
 
   return (
