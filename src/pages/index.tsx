@@ -8,9 +8,9 @@ import { ICONS } from '../utils/constants';
 const Home: NextPage = () => (
   <div>
     <Head>
-      <title>{'Ecommerce site by Olesia'}</title>
-      <meta name={'Ecommerce site'} content={'Built by Olesia'} />
-      <link rel={'icon'} href={ICONS.shop} />
+      <title>Ecommerce site by Olesia</title>
+      <meta name='Ecommerce site' content='Built by Olesia' />
+      <link rel='icon' href={ICONS.shop} />
     </Head>
     <main className='h-screen flex flex-col'>
       <Header />

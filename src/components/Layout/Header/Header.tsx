@@ -24,11 +24,7 @@ const Header = () => {
           <IconButtonCart />
         </div>
       </div>
-      {isMenuOpened && (
-        <div className='w-52 text-3xl p-4'>
-          <MenuDropdown />
-        </div>
-      )}
+      {isMenuOpened && <MenuDropdown />}
     </>
   );
 };

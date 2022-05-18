@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Icon from '../Icon/Icon';
 
 export type ListItemType = {
   id: string;
@@ -9,15 +10,27 @@ export type ListItemType = {
 type ListProps = {
   listItems: ListItemType[];
   className?: string;
+  isIconVisible?: boolean;
+  iconSrc?: string;
 };
 
-const List = ({ listItems, className }: ListProps) => (
+const List = ({
+  listItems,
+  className,
+  isIconVisible = false,
+  iconSrc,
+}: ListProps) => (
   <>
     {listItems.map((item) => (
       <li className={`${className} list-none`} key={item.id}>
-        <Link href={`/${item?.routeLink}`}>
-          <a>{item.title}</a>
-        </Link>
+        <div className='flex ml-2'>
+          <Link href={`/${item?.routeLink}`}>
+            <a>{item.title}</a>
+          </Link>
+          {isIconVisible && (
+            <Icon src={iconSrc ?? ''} alt={`list option ${item.title}`} />
+          )}
+        </div>
       </li>
     ))}
   </>
