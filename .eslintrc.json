@@ -22,7 +22,7 @@
     "react/prop-types": 0,
     "jsx-quotes": ["error", "prefer-single"],
     "semi": ["error", "always"],
-    "max-len": [2, { "code": 120, "ignoreUrls": true }],
+    "max-len": ["warn", { "code": 133, "ignoreUrls": true }],
     "no-multiple-empty-lines": "off",
     "comma-dangle": [
       "error",

@@ -1,3 +1,11 @@
-export default function Story() {
-  return <h1>Story</h1>;
-}
+import PageLayout from '../components/Layout/PageLayout';
+
+const OurStory = () => {
+  return (
+    <PageLayout>
+      <h1>Our Story</h1>
+    </PageLayout>
+  );
+};
+
+export default OurStory;
