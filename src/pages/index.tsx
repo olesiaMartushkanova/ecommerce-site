@@ -12,7 +12,7 @@ const Home: NextPage = () => (
       <link rel='icon' href={ICONS.shop} />
     </Head>
     <PageLayout>
-      <div className='flex flex-1 flex-col overflow-auto justify-center m-auto'>
+      <div className='justify-center m-auto'>
         <Button label='Shop now' />
       </div>
     </PageLayout>

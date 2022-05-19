@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import IconButtonCart from './components/IconButtonCart';
 import IconButtonNavMenu from './components/IconButtonNavMenu';
+import Label from './components/Label';
 import MenuDropdown from './components/MenuDropdown';
 
 type HeaderProps = {
@@ -21,9 +22,7 @@ const Header = ({ className }: HeaderProps) => {
             onClick={handleClick}
           />
         </div>
-        <div className='font-bold text-xl bg-black text-white p-2'>
-          Happy Shop
-        </div>
+        <Label />
         <div className='absolute right-0 mr-6'>
           <IconButtonCart />
         </div>

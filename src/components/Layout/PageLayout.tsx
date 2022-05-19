@@ -8,7 +8,7 @@ type PageLayout = {
 const PageLayout = ({ children }: PageLayout) => (
   <main className='h-screen flex flex-col'>
     <Header />
-    {children}
+    <div className='flex flex-1 flex-col overflow-auto'>{children}</div>
     <Footer />
   </main>
 );

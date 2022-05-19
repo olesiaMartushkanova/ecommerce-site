@@ -19,7 +19,7 @@ const Icon = ({
   onClick,
   isClickable = false,
 }: IconProps) => {
-  const cursorPointer = isClickable ? 'focus:cursor-auto' : undefined;
+  const cursorPointer = isClickable ? 'hover:cursor-pointer' : undefined;
 
   return (
     <Image
