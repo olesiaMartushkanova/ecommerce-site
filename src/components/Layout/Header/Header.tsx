@@ -3,13 +3,17 @@ import IconButtonCart from './components/IconButtonCart';
 import IconButtonNavMenu from './components/IconButtonNavMenu';
 import MenuDropdown from './components/MenuDropdown';
 
-const Header = () => {
+type HeaderProps = {
+  className?: string;
+};
+
+const Header = ({ className }: HeaderProps) => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const handleClick = () =>
     isMenuOpened ? setIsMenuOpened(false) : setIsMenuOpened(true);
 
   return (
-    <>
+    <div className={className}>
       <div className='flex relative justify-evenly items-center h-24'>
         <div className='absolute left-0 ml-6'>
           <IconButtonNavMenu
@@ -24,8 +28,8 @@ const Header = () => {
           <IconButtonCart />
         </div>
       </div>
-      {isMenuOpened && <MenuDropdown />}
-    </>
+      <MenuDropdown isMenuOpened={isMenuOpened} />
+    </div>
   );
 };
 
