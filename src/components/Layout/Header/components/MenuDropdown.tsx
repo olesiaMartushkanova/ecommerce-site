@@ -6,7 +6,6 @@ type MenuDropdownProps = {
 };
 
 const MenuDropdown = ({ isMenuOpened }: MenuDropdownProps) => {
-  // TODO: convert to uppercase
   return (
     <div
       className={`${
@@ -15,7 +14,7 @@ const MenuDropdown = ({ isMenuOpened }: MenuDropdownProps) => {
     >
       <List
         listItems={SHOP_LIST_ITEMS}
-        className='mb-3 last:mb-0'
+        className='mb-3 last:mb-0 ml-2'
         isIconVisible={true}
         iconSrc={ICONS.next}
       />

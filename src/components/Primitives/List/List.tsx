@@ -23,7 +23,7 @@ const List = ({
   <>
     {listItems.map((item) => (
       <li className={`${className} list-none`} key={item.id}>
-        <div className='flex ml-2'>
+        <div className='flex'>
           <Link href={`/${item?.routeLink}`}>
             <a>{item.title}</a>
           </Link>
